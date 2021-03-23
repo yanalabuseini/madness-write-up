@@ -54,7 +54,7 @@ i tried to login to ssh using the username and the password (that we found on th
 
 after alot of tries i thought of downloading the image that's in tryhackme website and try some stego on it
 
-[!alttext](stego.jpg)
+![alttext](stego.jpg)
 
 wget "https://i.imgur.com/5iW7kC8.jpg" ~> and it's one more time a jpg so it's a high chance it is a stego 
 steghide extract -sf 5iW7kC8.jpg and enter a null password then you'll have a password.txt file there you can find the password for the user 
