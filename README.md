@@ -1,13 +1,16 @@
 # madness-write-up
 
 
+this is a write up for the tryhackme machine "madness"
+
+
 
 first of all deploy the machine and make sure you are connected to the vpn
 
 the first step is to enumerate to find as much information about our target as possible
 i'll use this command "nmap -p- -A -sC -sS -vv -oN full_ports <ip>"
 	
-	-p- -> options is used to scan all ports the default is to scan only the top 1000 ports but this flag will scan all 65535 ports
+	-p- -> the option is used to scan all ports, the default is to scan only the top 1000 ports but this flag will scan all 65535 ports
 	-A  -> flag enables os detection, version detection and script scanning
 	-sC -> to scan with default NSE scripts. Considered useful for discovery and safe
 	-vv -> to increase the verbosity level
