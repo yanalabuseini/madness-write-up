@@ -21,8 +21,8 @@ i always love to start gobuster and nikto however they are not necessary in this
 
 looking at the web page we find the default page for apache2 and it's always important to take a look in the page source code  
 
-we'll find a comment sayingg "they will never find me" and it's pointing to an image that is not visible in the default page so we will download that picture by copying it's location and using wget
-wget "<the-link-you-copied>"
+we'll find a comment saying "they will never find me" and it's pointing to an image that is not visible in the default page so we will download that picture by copying it's location and using wget
+the command ~> wget "<the-link-you-copied>"
 
 but you'll notice that you can't open the image, let's use the "file" command and figure what's wrong "file thm.jpg" it says it's a png file but the extension is jpg so we need to edit the file to match the signature(magic number) for the jpg, after one google search i found this link "https://en.wikipedia.org/wiki/List_of_file_signatures" 
 
