@@ -6,12 +6,10 @@ first of all deploy the machine and make sure you are connected to the vpn
 
 the first step is to enumerate to find as much information about our target as possible
 i'll use this command "nmap -p- -A -sC -sS -vv -oN full_ports <ip>"
+	
 	-p- -> options is used to scan all ports the default is to scan only the top 1000 ports but this flag will scan all 65535 ports
 	-A  -> flag enables os detection, version detection and script scanning
 	-sC -> to scan with default NSE scripts. Considered useful for discovery and safe
-
-	-sS -> 
-
 	-vv -> to increase the verbosity level
 	-oN -> save the output to a text file in our case it's called "full_ports"
 	ip  -> and finally specify the machine's ip
@@ -55,6 +53,8 @@ the hidden.txt file has the username but in an indirect way so we need to decryp
 i tried to login to ssh using the username and the password (that we found on the web page) but it didn't work then we need the password because we know the username is 100% correct
 
 after alot of tries i thought of downloading the image that's in tryhackme website and try some stego on it
+
+[!alt text](github.png)
 
 wget "https://i.imgur.com/5iW7kC8.jpg" ~> and it's one more time a jpg so it's a high chance it is a stego 
 steghide extract -sf 5iW7kC8.jpg and enter a null password then you'll have a password.txt file there you can find the password for the user 
